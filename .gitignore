@@ -109,11 +109,12 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.plpenv
 
 # Spyder project settings
 .spyderproject
 .spyproject
-
+settings.py/
 # Rope project settings
 .ropeproject
 
