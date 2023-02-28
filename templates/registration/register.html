@@ -1,0 +1,78 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title  %}
+ signup page
+{% endblock  %}
+
+
+
+
+
+
+{% block signup %}
+    <div class="container">
+        <form  method= "POST">
+            {% csrf_token %}
+            <div class="row justify-content-md-center">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="login-screen">
+                        <div class="login-box">
+                            <a href="#" class="login-logo">
+                                <img src="//ssl.gstatic.com/accounts/ui/logo_2x.png"
+                                    alt="Bootdey bootstrap snippets bootdey">
+                            </a>
+                            <div class="row gutters">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="first_name" placeholder="First Name" maxlength="100" , required="" id="id_first_name">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="last_name" placeholder="Last Name" maxlength="100" , required="" id="id_second_name">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="username" placeholder="username" maxlength="100" , required="" id="username">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="youremail@gmail.com" maxlength="100" , required="" id="email">
+
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="password1" placeholder="*******"  , required="" id="password">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="password2" placeholder="******"  , required="" id="password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="actions clearfix">
+                                <button type="submit" class="btn btn-primary btn-block">signup</button>
+                            </div>
+                         
+                          
+                            <a href="{% url 'login'%}" class="additional-link">Have an Account?  <span>Login Now</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- <form method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+            {{ form }}
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form> -->
+{% endblock  %}
